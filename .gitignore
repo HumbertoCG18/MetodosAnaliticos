@@ -1,0 +1,10 @@
+__pycache__/
+.ruff_cache/
+.coverage
+htmlcov/
+graphify-out/
+tmp/
+output/
+*.docx
+*.pdf
+simulador_fila (1).py
