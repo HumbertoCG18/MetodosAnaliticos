@@ -1,0 +1,38 @@
+{
+  "simulation": {
+    "randoms": 100000,
+    "seed": 42
+  },
+  "queues": {
+    "Q1": {
+      "servers": 1,
+      "capacity": null,
+      "service": [1.0, 2.0],
+      "external_arrival": [2.0, 4.0],
+      "first_arrival": 2.0
+    },
+    "Q2": {
+      "servers": 2,
+      "capacity": 5,
+      "service": [4.0, 6.0]
+    },
+    "Q3": {
+      "servers": 2,
+      "capacity": 10,
+      "service": [5.0, 15.0]
+    }
+  },
+  "routes": {
+    "Q1": [
+      {"to": "Q2", "probability": 0.2},
+      {"to": "Q3", "probability": 0.8}
+    ],
+    "Q2": [
+      {"to": "Q1", "probability": 0.3},
+      {"to": "Q3", "probability": 0.5}
+    ],
+    "Q3": [
+      {"to": "Q2", "probability": 0.7}
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+.workflow/local/
+__pycache__/
+qa/
+.coverage
+.ruff_cache/
