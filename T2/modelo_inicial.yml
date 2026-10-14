@@ -1,0 +1,34 @@
+# T2 - assistência técnica (modelo hipotético), cenário inicial.
+# Clientes = ordens de serviço/equipamentos; tempos em minutos.
+# Q1 triagem, Q2 reparo, Q3 teste. Capacidade inclui quem está em atendimento.
+# Em Q3, os 80% que faltam para 1 representam saída da rede.
+simulation:
+  randoms: 1000000
+  seed: 42
+
+queues:
+  Q1:
+    servers: 1
+    capacity: 5
+    service: [2.0, 4.0]
+    external_arrival: [5.0, 7.0]
+    first_arrival: 6.0
+  Q2:
+    servers: 1
+    capacity: 8
+    service: [6.0, 10.0]
+  Q3:
+    servers: 1
+    capacity: 5
+    service: [2.0, 4.0]
+
+routes:
+  Q1:
+    - to: Q2
+      probability: 1.0
+  Q2:
+    - to: Q3
+      probability: 1.0
+  Q3:
+    - to: Q2
+      probability: 0.2
