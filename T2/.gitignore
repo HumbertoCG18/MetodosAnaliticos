@@ -1,0 +1,7 @@
+# A raiz ignora *.pdf e output/; os entregáveis da T2 devem ser versionados.
+!*.pdf
+!output/
+
+*.log
+*.tmp
+~$*
