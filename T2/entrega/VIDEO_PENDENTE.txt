@@ -1,3 +1,0 @@
-Vídeo ainda não gravado nem publicado.
-Após gravar e publicar no YouTube (não listado), crie T2/entrega/VIDEO.txt com o link real,
-apague este arquivo e reconstrua o ZIP: python T2/gerar_entrega.py zip
